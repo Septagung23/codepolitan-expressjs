@@ -1,0 +1,19 @@
+<% layout('layouts/app') %>
+<h1>A Place for you to Yepp</h1>
+
+<% for(const place of places) { %>
+<a href="/places/<%= place._id %>" style="text-decoration: none">
+  <div class="card mb-3 p-2">
+    <div class="row">
+      <div class="col-md-8">
+        <h5 class="card-title"><%= place.title %></h5>
+        <p class="card-text"><%= place.description %></p>
+        <p class="card-text">
+          <small class="text-secondary"><%= place.location %></small>
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+
+<% } %>
